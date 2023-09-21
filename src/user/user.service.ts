@@ -26,6 +26,15 @@ export class UserService {
     return this.useReposirory.find();
   }
 
+  async getUserByIdUsingRealtion(userId: number): Promise<UserEntity> {
+    return this.useReposirory.findOne({
+      where: {
+        id: userId,
+      },
+      relations: ['addresses'],
+    });
+  }
+
   async findUserById(userId: number): Promise<UserEntity> {
     const user = await this.useReposirory.findOne({
       where: {
