@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { UserService } from 'src/user/user.service';
+import { UserService } from '../user/user.service';
 import { LoginDto } from './dtos/login.dto';
-import { UserEntity } from 'src/user/entities/user.entity';
+import { UserEntity } from '../user/entities/user.entity';
 import { compare } from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
 import { ReturnLogin } from './dtos/returnLogin.dto';
-import { ReturnUserDto } from 'src/user/dtos/ReturnUser.dto';
+import { ReturnUserDto } from '../user/dtos/ReturnUser.dto';
 import { LoginPayload } from './dtos/loginPayload.dto';
 
 @Injectable()

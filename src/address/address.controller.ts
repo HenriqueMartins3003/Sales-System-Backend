@@ -7,9 +7,9 @@ import {
 } from '@nestjs/common';
 import { CreateAddressDto } from './dtos/createAddress.dto';
 import { AddressService } from './address.service';
-import { Roles } from 'src/decorators/roles.decorators';
-import { Usertype } from 'src/enum/user-type.enum';
-import { UserId } from 'src/decorators/user-id.decorator';
+import { Roles } from '../decorators/roles.decorators';
+import { Usertype } from '../enum/user-type.enum';
+import { UserId } from '../decorators/user-id.decorator';
 
 @Roles(Usertype.User)
 @Controller('address')
